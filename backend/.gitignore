@@ -1,0 +1,25 @@
+# R
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Environment
+.env
+.Renviron
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
