@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# GrafikViz 📊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GrafikViz**, veri görselleştirme süreçlerini democratize eden, yapay zeka destekli akıllı bir analiz platformudur. Kullanıcıların Excel/CSV dosyalarını yükleyerek saniyeler içinde zengin görselleştirmeler elde etmesini sağlar. Ayrıca, **Antigravity Manager** AI asistanı ile süreç boyunca rehberlik eder ve yüklenen grafik görsellerini analiz ederek (Image-to-Chart) en uygun grafik türünü önerir.
 
-Currently, two official plugins are available:
+Bu proje, **Samsun Üniversitesi Yazılım Mühendisliği Bölümü Yazılım Gerçekleme ve Test** dersi kapsamında **Dr. Öğr. Üyesi Nurettin Şenyer**'in başlattığı challenge için geliştirilmiştir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Özellikler
 
-## React Compiler
+### 📊 Geniş Grafik Kütüphanesi (15+ Tür)
+Veri setinizin yapısına göre otomatik olarak önerilen ve render edilen 16 farklı grafik türü:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**✅ Tam Fonksiyonel (12 Grafik)**
+*   **Bar & Horizontal Bar Charts:** Kategorik karşılaştırmalar için.
+*   **Line & Multi-line Charts:** Zaman serisi ve trend analizleri için.
+*   **Area Chart:** Hacimsel değişimler için.
+*   **Scatter Plot:** Değişkenler arası ilişki analizi.
+*   **Pie & Donut Charts:** Oransal dağılımlar.
+*   **Histogram:** Frekans dağılımı analizi (Görsel yükleme ile otomatik tespit edilir!).
+*   **Box Plot:** İstatistiksel dağılım ve aykırı değer analizi.
+*   **Stacked & Grouped Bar Charts:** Çok boyutlu karşılaştırmalar.
 
-## Expanding the ESLint configuration
+**⚠️ Deneysel / Ek Özellikler**
+*   **Bubble Chart:** 3 boyutlu veri analizi.
+*   **Violin Plot:** Yoğunluk bazlı dağılım.
+*   **Heatmap & Radar Chart:** (Geliştirme aşamasında)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧠 AI Destekli Analiz & İletişim
+*   **Antigravity Manager:** Veri analizi konusunda uzmanlaşmış AI chatbot (Gemini 2.5 Flash destekli).
+*   **Akıllı Grafik Önerisi:** Yüklenen veriyi analiz eder (sayısal/kategorik sütunlar, zaman serisi vb.) ve en uygun grafikleri "En Uygun", "Uygun", "Alternatif" olarak derecelendirir.
+*   **Görselden Grafik Tanıma:** Elinizdeki bir grafik görselini yükleyin, AI türünü tanısın ve veriniz için uygunluğunu kontrol edip otomatik olarak çizsin.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🛠 Teknoloji Yığını
+Proje, hibrit bir mimari üzerine kurulmuştur:
+*   **Frontend:** React, TypeScript, Tailwind CSS, Recharts, Lucide React
+*   **Backend (Orchestration & AI):** Python (FastAPI), Google Gemini 2.5 Flash API
+*   **Backend (Data Viz Engine):** R (Plumber, ggplot2) - *Yüksek kaliteli istatistiksel grafikler için*
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Kurulum
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+### Gereksinimler
+*   Node.js (v18+)
+*   Python (3.9+)
+*   R (4.0+)
+
+### Adım 1: Depoyu Klonlayın
+```bash
+git clone https://github.com/nisakrkmz/data-viz-project.git
+cd GrafikViz
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Adım 2: Frontend Kurulumu
+```bash
+cd frontend_new
+npm install
+npm run dev
 ```
+
+### Adım 3: Python Backend Kurulumu
+```bash
+cd backend_python
+python -m venv venv
+# Windows için:
+venv\Scripts\activate
+# Mac/Linux için:
+# source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### Adım 4: R Backend Kurulumu
+R konsolunda veya terminalde:
+```bash
+Rscript backend/run_server.R
+```
+
+Tarayıcınızda **http://localhost:5173** adresine giderek uygulamayı kullanmaya başlayabilirsiniz!
+
+## 📝 Lisans
+MIT License
