@@ -1,6 +1,6 @@
-# GrafikViz 📊
+# DataViz 📊
 
-**GrafikViz**, veri görselleştirme süreçlerini democratize eden, yapay zeka destekli akıllı bir analiz platformudur. Kullanıcıların Excel/CSV dosyalarını yükleyerek saniyeler içinde zengin görselleştirmeler elde etmesini sağlar. Ayrıca, **Antigravity Manager** AI asistanı ile süreç boyunca rehberlik eder ve yüklenen grafik görsellerini analiz ederek (Image-to-Chart) en uygun grafik türünü önerir.
+**DataViz**, veri görselleştirme süreçlerini democratize eden, yapay zeka destekli akıllı bir analiz platformudur. Kullanıcıların Excel/CSV dosyalarını yükleyerek saniyeler içinde zengin görselleştirmeler elde etmesini sağlar. Ayrıca, **Antigravity Manager** AI asistanı ile süreç boyunca rehberlik eder ve yüklenen grafik görsellerini analiz ederek (Image-to-Chart) en uygun grafik türünü önerir.
 
 Bu proje, **Samsun Üniversitesi Yazılım Mühendisliği Bölümü Yazılım Gerçekleme ve Test** dersi kapsamında **Dr. Öğr. Üyesi Nurettin Şenyer**'in başlattığı challenge için geliştirilmiştir.
 
@@ -47,7 +47,7 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyi
 ### Adım 1: Depoyu Klonlayın
 ```bash
 git clone https://github.com/nisakrkmz/data-viz-project.git
-cd GrafikViz
+cd data-viz-project
 ```
 
 ### Adım 2: Frontend Kurulumu
